@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
 
 # 모듈 변수 생성
 module_variable = "I am a module variable."
