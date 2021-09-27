@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """Intro to Python - Part 1 - Hands-On Exercise."""
 
 
