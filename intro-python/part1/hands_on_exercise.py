@@ -18,11 +18,11 @@ i = random.randint(0, 100)
 picked_fruit = random.choice(['orange', 'strawberry', 'banana'])
 
 
-# TODO: 두 수의 곱을 반환하는 funtion을 만들어보세요 funtion의 이름은 multi로 지정합니다.
-# Define the function here.
+# TODO: 두 수의 곱을 반환하는 함수를 만들어보세요 함수의 이름은 multi로 지정합니다.
+# 아래에 함수를 작성하세요.
 
 
-# TODO: 두 수의 곱을 반환하는 funtion을 호출하여 아래 곱셈의 값을 출력하세요
+# TODO: 두 수의 곱을 반환하는 함수를 호출하여 아래 곱셈의 값을 출력하세요
 
 print("12 x 96 =",)
 
