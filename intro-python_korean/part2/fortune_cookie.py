@@ -2,24 +2,23 @@
 # -*- coding: utf-8 -*-
 """Script flow and debugging. Print your own fortune cookie!"""
 
-
 import random
 
 
 FORTUNES = [
-    "There is a good chance your code will work, eventually.",
-    "The weather will be hot, cold or just right today.",
-    "I see Network DevOps in your future.",
+    "이 코드도 언젠간 잘 동작할 거에요",
+    "오늘 날씨 너무 좋아요!",
+    "미래에는 Devnet과 함께해요",
 ]
 
 
 def generate_fortune() -> str:
-    """랜덤한 FORTUNES 메세지를 반환하는 함수"""
+    """행운을 생성해주는 함수"""
     return random.choice(FORTUNES)
 
 
 def generate_lucky_numbers(how_many: int) -> list:
-    """사용자가 입력한 숫자를 개수로하는 행운번호를 반환하는 함수"""
+    """입력된 개수만큼 행운의 번호를 생성해주는 함수"""
     lucky_numbers = []
     for _ in range(how_many):
         lucky_numbers.append(random.randint(0, 99))
@@ -27,23 +26,25 @@ def generate_lucky_numbers(how_many: int) -> list:
 
 
 def create_fortune_cookie_message(how_many_lucky_numbers: int) -> str:
+    """행운의 메세지를 생성하고 반환하는 함수
+    메세지는 사용자의 행운번호 또한 포함해야합니다
     """
-    FORTUNES 메세지를 출력하는 함수 +해당 메세지에 행운번호도 함께 포함시키세요
-    """
-    # TODO: generate_fortune()함수와 generate_lucky_numbers()함수를 호출하여
-    # FORTUNES 메세지와 행운번호를 생성하고 해당 값을 반환하도록 하세요
-    raise NotImplementedError()
+    # TODO: generate_fortune() 과 generate_lucky_numbers() 를 이용하여
+    # 행운 메세지를 생성하고 해당 메세지를 반환하는 함수를 만들어보세요
+    message = generate_fortune()
+    numbers = str(generate_lucky_numbers(how_many_lucky_numbers))
+    return f'{message} \nAnd your lucky number: " {numbers}'
 
 
 def main():
-    """포춘쿠키 생성 및 출력하는 main함수"""
+    """포춘쿠키 생성 및 출력하는 Main문"""
     print("Get your fortune cookie!")
 
-    # 행운번호의 개수를 입력받아 qty_lucky_numbers변수에 저장
+    # 필요한 행운번호의 개수를 물어보는 코드
     qty_lucky_numbers = input("How many lucky numbers would you like?  ")
     qty_lucky_numbers = int(qty_lucky_numbers.strip())
 
-    # qty_lucky_numbers를 create_foutune_cookie_message의 인자로 전달하여 생성될 행운번호 개수 지정 및 행운메세지 출력
+    # 행운 생성 및 출력하는 코드
     fortune_cookie_message = create_fortune_cookie_message(qty_lucky_numbers)
     print("\nHere is your fortune:\n")
     print(fortune_cookie_message)
