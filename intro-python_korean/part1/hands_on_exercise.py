@@ -12,7 +12,7 @@ print("{:.3f}".format(pi))
 print("=" * 20) # 구분선입니다
 # TODO: 0에서 99사이로 랜덤하게 생성되는 변수 i가 50보다 크거나 작은 경우, i값을 출력하고 50인경우  본인의 이름 이니셜을 출력하세요
 i = random.randint(0, 100)
-if not i =50:
+if not i ==50:
 	print(i)
 else:
 	print("JH")
